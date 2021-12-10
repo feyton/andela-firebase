@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;900&display=swap');
+
+:root {}
+
 
 *, html {
     box-sizing: border-box;
@@ -74,8 +78,8 @@ form input:focus, textarea:focus {
     border: 1px solid grey;
     background-color: #fff;
     color: black;
-    font-family: "Lato";
-    text-transform: capitalize;
+    font-family: "Lexend";
+    /* text-transform: capitalize; */
 }
 
 form input::placeholder, form textarea::placeholder {
@@ -134,6 +138,8 @@ ul li span:first-child {
 .user-info {
     display: none;
 }
+
+.log-in {}
 
 .modal {
     position: absolute;
