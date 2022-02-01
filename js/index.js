@@ -71,7 +71,7 @@ export const renderBlogList = (posts, postDiv, detailPage) => {
 
 export const loadBlogsForBlogger = (page, limit) => {
   const pageQ = page || 1;
-  const limitQ = limit || 3;
+  const limitQ = limit || 4;
   $.ajax({
     url: baseUrl + `api/v1/blogs?page=${pageQ}&limit=${limitQ}`,
     success: (data) => {
