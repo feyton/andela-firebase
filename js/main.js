@@ -432,6 +432,7 @@ export const renderDashboard = () => {
   let actions = getOrSetItem("actions");
   $("#latest-search-div").html("");
   $("#actions-list").html("");
+  $(".latest-bubble-actions").html("");
   terms.forEach((term) => {
     $("#latest-search-div").prepend(
       `
@@ -456,4 +457,16 @@ export const renderDashboard = () => {
     `
     );
   });
+
+  for (var i = 0; i < actions.length; i++) {
+    actions = actions.reverse()
+    if (i > 3) {
+      break;
+    }
+    $(".latest-bubble-actions").append(
+      ` <div class="s-action ${actions[i].category}"><span>
+      ${actions[i].activity}</span></div>
+      `
+    );
+  }
 };
