@@ -70,6 +70,21 @@ $(document).ajaxError((error) => {
   }
 });
 
+export const resolvePathname = (path) => {
+  let host = window.location.host;
+  // console.log(host);
+  let local = "127.0.0.1";
+  let gitHost = "feyton.github.io";
+  if (host.startsWith(local)) {
+    return path;
+  } else if (host.startsWith(gitHost)) {
+    let newPath = "/andela-frontend" + path;
+    return newPath;
+  } else {
+    return path;
+  }
+};
+
 export const handleAjaxError = (error) => {
   let errData = error.responseJSON;
   switch (error.status) {
